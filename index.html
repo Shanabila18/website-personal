@@ -1,158 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <!-- Material CDN -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-      rel="stylesheet">
-    <!-- STYLESHEET-->
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <div class="container">
-        <aside>
-            <div class="top">
-                <div class="logo"> 
-                <img src="./img/taksaka.png">
-                <h2>TAKS<span class="">AKA</span></h2>
-            </div>
-            <div class="close" id="close-btn">
-                <span class="material-icons-sharp">close</span>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kedai In-Sprirasi</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- AlpineJS-->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- App -->
+    <script src="src/app.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Kedai <span>InSpirasi</span></a>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#Katalog">Katalog</a>
+        <a href="#reservasi">Reservasi</a>
+        <a href="#Donasi">Donasi</a>
+        <a href="#review">Rating</a>
+        <a href="#contact">Kontak</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="loginregis.html" id="user-button"
+          ><i data-feather="user"></i
+        ></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- Search Form Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search Form End -->
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Hidangan Lezat, <span>Inspirasi Tak Terbatas</span></h1>
+        <p>
+          Nikmati makanan dan minuman lezat dalam suasana yang penuh
+          kreativitas. Di sini, setiap sajian bukan hanya soal rasa, tapi juga
+          sumber inspirasi!
+        </p>
+      </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span>Kami</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="img/Tentang.jpg" alt="Tentang Kami" />
         </div>
-            <div class="sidebar">
-                <a href="#">
-                    <span class="material-icons-sharp">grid_view</span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">person_outline</span>
-                    <h3>Customers</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">receipt_long</span>
-                    <h3>Orders</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">insights</span>
-                    <h3>Analytics</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">mail_outline</span>
-                    <h3>Messages</h3>
-                    <span class="message-count">50</span>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">inventory</span>
-                    <h3>Products</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">report_gmailerrorred</span>
-                    <h3>Report</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">settings</span>
-                    <h3>Settings</h3>
-                <a href="#">
-                    <span class="material-icons-sharp">add</span>
-                    <h3>Add Product</h3>
-                <a href="#">
-                    <span class="material-icons-sharp">logout</span>
-                    <h3>logout</h3>
-                </a>
-            </div>
-        </aside>
-        <!-------------------------------------------------------------------------------->
-        <main>
-            <h1>Dashboard</h1>
+        <div class="content">
+          <h3>Penasaran dengan perjalanan kami?</h3>
+          <p>
+            Cari tahu lebih banyak tentang bagaimana Kedai In_spirasi berkembang
+            dan memberikan dampak positif. Klik di bawah untuk membaca cerita
+            lengkap kami.
+          </p>
+          <a href="TentangKami.html" class="cta">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
 
-            <div class="date">
-                <input type="date">
-            </div>
+    <!-- Katalog Section Start -->
+    <section id="Katalog" class="Katalog">
+      <h2><span>Kata</span>log</h2>
+      <div class="row">
+        <div class="content">
+          <h3>Siap Menemukan Hidangan Lezat Kami?</h3>
+          <p>
+            Temukan berbagai produk kuliner hasil karya teman-teman disabilitas.
+            Klik di bawah untuk melihat pilihan lengkap kami.
+          </p>
+          <a href="katalog.html" class="cta">Baca Selengkapnya</a>
+        </div>
+        <div class="Katalog-img">
+          <img src="img/Tentang.jpg" alt="Tentang Kami" />
+        </div>
+      </div>
+    </section>
+    <!-- Katalog Section End -->
 
-            <div class="insights">
-                <div class="sales">
-                    <span class="material-icons-sharp">analytics</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Sales</h3>
-                            <h1>$25,024</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>82%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                <!----------------------------------------------------------------->
-                <div class="expenses">
-                    <span class="material-icons-sharp">bar_chart</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Expenses</h3>
-                            <h1>$25,024</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>43%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                <!-------------------------------------------------------------------->
-                <div class="income">
-                    <span class="material-icons-sharp">stacked_line_chart</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Income</h3>
-                            <h1>$25,024</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>56%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                <div class="recent-order">
-                    <h2>Recent Order</h2>
-                    <table>
-                        <thead> 
-                            <tr>
-                                <th>Product Name</th>
-                                <th>Product Number</th>
-                                <th>Payment</th>
-                                <th>Status</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>
-                                    
-                                </th>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+    <!-- Reservasi Section Start -->
+    <section id="reservasi" class="reservasi">
+      <h2><span>Reser</span>vasi</h2>
+
+      <div class="row">
+        <div class="reservasi-img">
+          <img src="img/Tentang.jpg" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h3>Pesan Sekarang, Datang Nanti!</h3>
+          <p>
+            Ayo, jadwalkan kunjunganmu dan rasakan pengalaman kuliner di Kedai
+            In_Spirasi! Jangan lewatkan kesempatan untuk menikmati hidangan
+            lezat sambil mendukung karya teman-teman disabilitas.
+          </p>
+          <a href="reservasi.html" class="cta">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </section>
+    <!-- Reservasi Section End -->
+
+    <!-- Donasi & Kolaborasi Section Start -->
+    <section id="Donasi" class="Donasi">
+      <h2><span>Donasi &</span> Kolaborasi</h2>
+
+      <div class="row">
+        <div class="content">
+          <h3>Buka Peluang Wujudkan Inovasi</h3>
+          <p>
+            Dukung kami menciptakan dunia inklusif dengan donasi atau
+            kolaborasi. Bersama, kita beri peluang bagi teman-teman disabilitas
+            untuk berkembang.
+          </p>
+          <a href="Donasi.html" class="cta">Baca Selengkapnya</a>
+        </div>
+        <div class="Donasi-img">
+          <img src="img/Tentang.jpg" alt="Tentang Kami" />
+        </div>
+      </div>
+    </section>
+    <!-- Donasi & Kolaborasi Section End -->
+
+    <!-- Review Customer Start -->
+    <section id="review" class="review" x-data="reviewForm()">
+      <h2><span>Rating &</span> Review</h2>
+
+      <!-- Rating Bintang -->
+      <div class="star-container">
+        <template x-for="star in 5">
+          <button
+            type="button"
+            @click="rating = star"
+            @mouseover="hover = star"
+            @mouseleave="hover = rating"
+            class="star-button"
+          >
+            <span x-text="hover >= star ? '★' : '☆'"></span>
+          </button>
+        </template>
+      </div>
+
+      <!-- Input Nama -->
+      <div class="input-container">
+        <input
+          x-model="name"
+          type="text"
+          placeholder="Nama Anda"
+          class="review-input"
+        />
+      </div>
+
+      <!-- Input Komentar -->
+      <div class="input-container">
+        <textarea
+          x-model="comment"
+          placeholder="Tulis review Anda di sini..."
+          class="review-textarea"
+        ></textarea>
+      </div>
+
+      <!-- Tombol Kirim -->
+      <div class="input-container">
+        <button @click="submitReview" class="submit-button">
+          Kirim Review
+        </button>
+      </div>
+
+      <!-- Daftar Review -->
+      <div class="review-list">
+        <h3 class="review-subtitle">Review yang Masuk:</h3>
+        <template x-for="r in reviews" :key="r.id">
+          <div class="review-card">
+            <div class="review-meta">
+              <span x-text="r.name"></span>
+              <span class="review-date">- <span x-text="r.date"></span></span>
             </div>
-        </main>
-    </div>
-</body>
+            <div class="review-stars">
+              <template x-for="s in 5">
+                <span x-text="r.rating >= s ? '★' : '☆'"></span>
+              </template>
+            </div>
+            <p x-text="r.comment" class="review-comment"></p>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <script>
+      function reviewForm() {
+        return {
+          name: "",
+          rating: 0,
+          hover: 0,
+          comment: "",
+          reviews: [],
+          submitReview() {
+            if (
+              this.name.trim() === "" ||
+              this.rating === 0 ||
+              this.comment.trim() === ""
+            ) {
+              alert("Mohon isi Nama, Rating, dan Komentar!");
+              return;
+            }
+            const today = new Date();
+            const date = today.toLocaleDateString("id-ID", {
+              day: "2-digit",
+              month: "long",
+              year: "numeric",
+            });
+
+            this.reviews.push({
+              id: Date.now(),
+              name: this.name.trim(),
+              date: date,
+              rating: this.rating,
+              comment: this.comment.trim(),
+            });
+
+            this.name = "";
+            this.rating = 0;
+            this.hover = 0;
+            this.comment = "";
+          },
+        };
+      }
+    </script>
+    <!-- Review Customer End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact">
+      <h2><span>Kontak</span>Kami</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex libero vel
+        cum asperiores sit.
+      </p>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4487.544552741322!2d107.00176277554748!3d-6.266724261351028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698dd8d8b90c3f%3A0x83ac4726a90ef1da!2sJl.%20Tawang%20Mangu%20No.200%2C%20RT.007%2FRW.008%2C%20Pengasinan%2C%20Kec.%20Rawalumbu%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017115!5e1!3m2!1sid!2sid!4v1742380552923!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="Telpon" />
+          </div>
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+      </div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#Katalog">Katalog</a>
+        <a href="#reservasi">Reservasi</a>
+        <a href="#Donasi">Donasi</a>
+        <a href="#review">Rating</a>
+        <a href="#contact">Kontak</a>
+      </div>
+      <div class="credit">
+        <p>Created By <a href="">Ausara Team</a>. | &copy; 2025</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
